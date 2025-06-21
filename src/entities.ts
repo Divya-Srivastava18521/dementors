@@ -133,7 +133,7 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
         player.flipX = false;
         player.move(player.speed, 0);
         break;
-      case "z":
+      /*case "z":
         if (player.isFull) {
           player.play("kirbFull");
           inhaleEffectRef.opacity = 0;
@@ -144,7 +144,22 @@ export function setControls(k: KaboomCtx, player: PlayerGameObj) {
         player.play("kirbInhaling");
         inhaleEffectRef.opacity = 1;
         break;
-      default:
+      default:*/
+      case "z":
+        if (player.isFull) {
+          player.play("kirbFull");
+          inhaleEffectRef.opacity = 0;
+        } else {
+          player.isInhaling = true;
+          player.play("kirbInhaling");
+          inhaleEffectRef.opacity = 1;
+        }
+        break;
+      case "x":
+        player.isInhaling = true;
+        player.play("kirbInhaling");
+        inhaleEffectRef.opacity = 1;
+        break;
     }
   });
   k.onKeyPress((key) => {
