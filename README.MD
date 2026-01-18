@@ -1,4 +1,4 @@
-## Demontors Game made with TypeScript + Kaboom.js
+## Dementors Game made with TypeScript + Kaboom.js
 
 ![game preview](preview.png)
 
