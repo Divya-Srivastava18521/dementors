@@ -6,6 +6,20 @@ The game includes multiple enemy types, scene-based level switching, player heal
 
 ---
 
+## 🧩 Why is the game called “Dementors”?
+
+The name **Dementors** comes from the terrifying creatures in the *Harry Potter* universe.
+
+Dementors are:
+
+- Creatures that cause intense despair and emotional darkness   
+- Feared for their ultimate attack: **“The Dementor’s Kiss”**, which removes the soul   
+- Described by **J.K. Rowling** as metaphors for **depression**
+
+This game borrows that idea of **survival under pressure** — where enemies feel like unstoppable threats, and the player must fight back and escape through the levels.
+
+---
+
 ## 🎮 Demo 
 
 ### ✅ Gameplay Screenshot 
@@ -59,6 +73,42 @@ Includes multiple enemies with unique behaviors:
 - Once an enemy is inhaled, the player becomes **full**
 - Release **Z** to shoot a **star projectile**
 - Star projectile destroys enemies on collision
+
+---
+
+## 🧠 Game Mechanics
+
+### 🎭 Player States
+The game uses different player states to manage gameplay actions:
+
+- **idle / run**
+- **jump**
+- **inhale**
+- **full** (after inhaling)
+- **shooting star attack**
+- **hit / damaged**
+- **respawn logic**
+
+---
+
+### 💥 Collisions & Damage System
+- Enemy collisions trigger a **damage event**
+- Player health decreases by **1**
+- If player HP reaches **0** → the game resets the current level
+
+---
+
+### 🪂 Falling Detection
+If the player falls below a certain position (off the map), the game reloads the scene and respawns the character.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Kaboom.js** (2D game engine)  
+- **TypeScript**  
+- **Scene-based design**  
+- **Map-based level system**  
 
 ---
 
